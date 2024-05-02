@@ -1,0 +1,21 @@
+// @import url('https://fonts.cdnfonts.com/css/milky-nice');
+@import './font.scss';
+$font-1:'Milky Nice',
+sans-serif;
+$font-2:"Nosifer",
+sans-serif;
+$white:#fff;
+$black:#000;
+$primary: #1FAAEE;
+$dark:#0E0E0D;
+$secondary: #050505;
+$text:#000;
+$heading: $white;
+$border:#4B4B4B;
+$bg:#DAF3FF;
+$stoke: #222120;
+$section-bg:#C1EAFF;
+$about-bg:$section-bg;
+:root {
+    scroll-behavior: auto !important;
+}

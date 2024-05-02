@@ -1,0 +1,156 @@
+.banner {
+    padding-top: 300px;
+    padding-bottom: 130px;
+    @include xl {
+        padding-bottom: 60px;
+        padding-top: 260px;
+    }
+    @include lg {
+        padding-top: 240px;
+        padding-bottom: 30px;
+    }
+    @include mmd {
+        padding-top: 160px;
+        padding-bottom: 0;
+    }
+    @include sm {
+        padding-top: 130px;
+    }
+    &-content {
+        & h1 {
+            font-size: 142px;
+            line-height: 110%;
+            margin-bottom: 32px;
+            color: $white;
+            text-shadow: 12px 12px 0px $stoke;
+            -webkit-text-stroke: 6px $stoke;
+            @include xl {
+                font-size: 120px;
+                margin-bottom: 20px;
+            }
+            @include lg {
+                font-size: 100px;
+                margin-bottom: 20px;
+            }
+            @include mmd {
+                font-size: 100px;
+                margin-bottom: 10px;
+                text-shadow: 5px 5px 0px $stoke;
+                -webkit-text-stroke: 3px $stoke;
+            }
+            @include sm {
+                font-size: 60px;
+            }
+            @include ssm {
+                font-size: 54px;
+            }
+        }
+        & p {
+            @include font-28;
+            line-height: 150%;
+            margin-bottom: 48px;
+            color: $white;
+            -webkit-text-stroke: 1.82px $stoke;
+            @include xl {
+                margin-bottom: 30px;
+            }
+            @include lg {
+                margin-bottom: 30px;
+            }
+            @include mmd {
+                margin-bottom: 20px;
+                -webkit-text-stroke-width: 1px;
+            }
+        }
+        & ul {
+            & li {
+                display: inline-block;
+                &:not(:last-child) {
+                    margin-right: 12px;
+                    @include xl {
+                        margin-right: 8px;
+                    }
+                }
+                & a {
+                    --size: 74px;
+                    width: var(--size);
+                    height: var(--size);
+                    border-radius: 100%;
+                    background-color: $primary;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 4px 4px 0 0 $black;
+                    border: 1px solid $stoke;
+                    &:hover {
+                        box-shadow: 0 0 0;
+                        // border: 0;
+                    }
+                    @include lg {
+                        --size: 65px;
+                    }
+                    @include md {
+                        --size: 65px;
+                    }
+                    @include sm {
+                        --size: 56px;
+                    }
+                }
+            }
+        }
+    }
+    &-img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        & img {
+            width: 100%;
+        }
+        @include xxxl {
+            padding: 0 22px;
+        }
+        @include md {
+            margin-top: 150px;
+        }
+        @include sm {
+            margin-top: 180px;
+        }
+        &::after {
+            position: absolute;
+            top: -85px;
+            left: -165px;
+            width: 315px;
+            height: 233px;
+            z-index: 2;
+            content: '';
+            background-image: url(../img/banner-left-img-2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            @include xl {
+                width: 270px;
+            }
+            @include lg {
+                top: -90px;
+                left: -150px;
+                width: 252px;
+                height: 170px;
+            }
+            @include md {
+                top: -101px;
+                left: -116px;
+                width: 202px;
+                height: 155px;
+            }
+            @include sm {
+                top: -150px;
+                left: 0px;
+                width: 202px;
+                height: 155px;
+            }
+            @include ssm {
+                top: -150px;
+            }
+        }
+    }
+}

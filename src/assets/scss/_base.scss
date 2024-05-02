@@ -1,0 +1,216 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $text;
+    font-family: $font-1;
+    background-color: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-1;
+    color: $heading;
+    font-weight: 500;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+h2 {
+    letter-spacing: calc((2px * 82px) / 100px);
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.common {
+    &-svg {
+        display: inline-block;
+        height: 1em;
+        overflow: visible;
+        vertical-align: -0.125em;
+    }
+    &-row {
+        --bs-gutter-x: 32px;
+        margin-bottom: calc(var(--bs-gutter-x) * -1);
+        @include mmd {
+            --bs-gutter-x: 24px;
+        }
+        &>div {
+            margin-bottom: var(--bs-gutter-x);
+        }
+    }
+    &-padding {
+        --padding-y: 120px;
+        --padding-x: 0;
+        padding: var(--padding-y) var(--padding-x);
+        @include xl {
+            --padding-y: 100px;
+        }
+        @include lg {
+            --padding-y: 100px;
+        }
+        @include md {
+            --padding-y: 80px;
+        }
+        @include sm {
+            --padding-y: 60px;
+        }
+        &-top {
+            padding-top: var(--padding-y);
+        }
+    }
+    &-title {
+        margin-bottom: 64px;
+        @include md {
+            margin-bottom: 40px;
+        }
+        @include sm {
+            margin-bottom: 30px;
+        }
+        & h2 {
+            @include font-82;
+            @include headingStoke();
+        }
+        & p {
+            @include font-24;
+            color: $black;
+        }
+    }
+}
+
+.btn {
+    --bs-btn-padding-x: 40px !important;
+    --bs-btn-padding-y: 19px !important;
+    --bs-btn-color: #fff !important;
+    --bs-btn-border-width: 1px !important;
+    --bs-btn-border-color: #0E0E0D !important;
+    --bs-btn-font-size: 30px !important;
+    --bs-btn-border-radius: 58px !important;
+    letter-spacing: calc((2px * 30px) / 100px);
+    background-color: $primary;
+    line-height: 110%;
+    @include box-shadow;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    @include transition;
+    @include lg {
+        --bs-btn-padding-x: 32px !important;
+        --bs-btn-padding-y: 18px !important;
+        --bs-btn-font-size: 26px !important;
+    }
+    @include md {
+        --bs-btn-padding-x: 32px !important;
+        --bs-btn-padding-y: 18px !important;
+        --bs-btn-font-size: 26px !important;
+    }
+    @include sm {
+        --bs-btn-padding-x: 30px !important;
+        --bs-btn-padding-y: 14px !important;
+        --bs-btn-font-size: 24px !important;
+    }
+    &:hover {
+        background-color: $primary !important;
+        border-color: $dark !important;
+        color: #fff !important;
+        box-shadow: 0 0 0;
+    }
+    &.bg-primary {
+        border-color: $primary !important;
+        color: $secondary !important;
+        &:hover {
+            background-color: transparent !important;
+            color: $primary !important;
+        }
+    }
+    &.bg-transparent {
+        border-color: $primary !important;
+        color: $primary !important;
+        &:hover {
+            background-color: $primary !important;
+            color: $secondary !important;
+        }
+    }
+}
+
+.social {
+    &-link {
+        --width: 48px;
+        width: var(--width);
+        height: var(--width);
+        background-color: $primary;
+        color: $heading;
+        box-shadow: 2px 2px 0 $black;
+        @include font-24;
+        &:hover {
+            box-shadow: 0 0 0;
+        }
+        @include sm {
+            --width: 38px;
+        }
+    }
+}
+
+#root {
+    overflow: hidden;
+    @media (min-width: 1300px) {
+        zoom: 85%;
+    }
+}
+
+.container {
+    @media (min-width: 1400px) {
+        max-width: 1340px;
+    }
+}
